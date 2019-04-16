@@ -1,2 +1,44 @@
 My Matlab folder for Machine Learning. Contains bunch of different projects. 
+
+Artifical Neural Networks:
+mendez - Training data
+V1: Self implemented standard artificial neural network, uses batch gradient descent for back prop
+V2: Added option for multiple epochs and implemented sequential gradient descent
+V3: Added extra layers to play around. 
+
+Bayesian Optimization:
+Draw_Gaussians: Simple script that generates data and plots the belonging confidence interval. 
+GPOpt: Bayesian Optimization. Use when function evaluations are expensive (Such as hyperparameter optimization). 
+Implemented the Expected Improvement algorithm. Kernel is obviously interchangeable, but Gaussian kernel is implemented.
+
+Dimension Reduction:
+LDA: Self implemented Linear Discriminant Analysis
+PCA: Self implemented Principle Component Analysis
+PLS: Self implemented Partial Least Squares
+
+Gaussian Mixture Model:
+data_synthesis: Produces .mat file containing two normally distributed datasets. 
+GMM: Self implemented Expectation Minimization algorithm that fits K Gaussians.
+plotgaussian: Plots the fitted Gaussians. Is required by GMM as it draws every iteration. 
+
+K-Means
+K_Means: self implemented algorithm. 
+K_Means_ex: Generates data and asks how many clusters you want it to fit. 
+
+Online Support Vector Clustering
+OSVC: Main file. Fits a GMM on the data and uses means as data representation. Then iteratively trains a SVC using 
+Regularized Follow The Leader with Negative Entry Regularization for Optimal Regret. If the representation is not confident
+in a new point, it is saved until memory is full and the GMM representation is updated. Decision boundary is set by a threshold. 
+
+Particle Filter:
+Example: Main file. Runs the function file particle_filter. May or may not have copied some code here and there. 
+
+Regression:
+Both Linear and Logistic regression. Both with own dataset. 
+
+Support Vector Machine:
+Either linear, kernelized or with hyperparameter optimization. 
+Comes with seperate prediction file in case of kernelized SVM. 
+
+OSVM is coming. 
 Online Support Vector Machine is especially interesting as it's part of a current research project for my graduation project for Tritium. 
